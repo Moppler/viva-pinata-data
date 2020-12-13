@@ -1,0 +1,17 @@
+{
+  "name": "@mattgibney/viva-pinata-data",
+  "version": "1.0.0",
+  "description": "Structured data for the Viva Pinata on Xbox 360",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^7.15.0",
+    "eslint-plugin-prettier": "^3.2.0",
+    "prettier": "^2.2.1"
+  }
+}
