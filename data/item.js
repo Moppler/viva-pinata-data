@@ -47,6 +47,26 @@ const itemData = [
     name: 'Jack o\' Lantern',
     type: 'PRODUCE',
   },
+  {
+    id: 9,
+    name: 'Pumpkin',
+    type: 'PRODUCE',
+  },
+  {
+    id: 10,
+    name: 'Tulip Seed',
+    type: 'SEED',
+  },
+  {
+    id: 11,
+    name: 'Apple',
+    type: 'PRODUCE',
+  },
+  {
+    id: 12,
+    name: 'Jar of Honey',
+    type: 'PRODUCE',
+  },
 ];
 
 module.exports = { itemData };

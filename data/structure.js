@@ -33,6 +33,14 @@ const structureData = [
       target: 1,
     },
   },
+  {
+    id: 4,
+    name: 'Badgesicle Home',
+    usedBy: {
+      type: 'PINATA',
+      target: 2,
+    },
+  },
 ];
 
 module.exports = { structureData };

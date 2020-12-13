@@ -9,7 +9,7 @@
 /**
  * @typedef {object} Variant
  * @property {string} colour
- * @property {Requirement[]} requirement
+ * @property {Requirement[][]} requirements
  */
 
 /**
@@ -53,19 +53,66 @@ const pinataData = [
     variants: [
       {
         colour: 'Blue',
-        requirement: [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 7 }],
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 7 }],
+        ],
       },
       {
         colour: 'Orange',
-        requirement: [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 8 }],
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 8 }],
+        ],
       },
       {
         colour: 'Pink',
-        requirement: [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 5 }],
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 5 }],
+        ],
       },
     ],
   },
-  { id: 2, name: 'Badgesicle' },
+  {
+    id: 2,
+    name: 'Badgesicle',
+    requirements: {
+      appear: [
+        // 2 nocturnal Pinata in garden
+      ],
+      visit: [
+        // 4 nocturnal Pinata in garden
+      ],
+      resident: [
+        [{ quantity: 1, action: 'EAT', type: 'PINATA', target: 36 }],
+        [{ quantity: 2, action: 'EAT', type: 'ITEM', target: 9 }],
+      ],
+      romance: [
+        [{ quantity: 1, action: 'EAT', type: 'PINATA', target: 52 }],
+        [{ quantity: 2, action: 'EAT', type: 'ITEM', target: 10 }],
+        [{ quantity: 1, action: 'IN_GARDEN', type: 'STRUCTURE', target: 4 }],
+      ],
+    },
+    variants: [
+      {
+        colour: 'Red',
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 11 }],
+        ],
+      },
+      {
+        colour: 'Blue',
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 7 }],
+        ],
+      },
+      {
+        colour: 'Yellow',
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 12 }],
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 5 }],
+        ],
+      },
+    ],
+  },
   { id: 3, name: 'Barkbark' },
   { id: 4, name: 'Bonboon' },
   { id: 5, name: 'Bunnycomb' },
@@ -133,35 +180,20 @@ const pinataData = [
     variants: [
       {
         colour: 'Purple',
-        requirement: [
-          {
-            quantity: 1,
-            action: 'EAT',
-            type: 'ITEM',
-            target: 4,
-          },
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 4 }],
         ],
       },
       {
         colour: 'Pink',
-        requirement: [
-          {
-            quantity: 1,
-            action: 'EAT',
-            type: 'ITEM',
-            target: 5,
-          },
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 5 }],
         ],
       },
       {
         colour: 'Light Green',
-        requirement: [
-          {
-            quantity: 1,
-            action: 'EAT',
-            type: 'ITEM',
-            target: 6,
-          },
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 6 }],
         ],
       },
     ],
@@ -205,35 +237,20 @@ const pinataData = [
     variants: [
       {
         colour: 'Dark Purple',
-        requirement: [
-          {
-            quantity: 1,
-            type: 'ITEM',
-            action: 'EAT',
-            target: 1,
-          },
+        requirements: [
+          [{ quantity: 1, type: 'ITEM', action: 'EAT', target: 1 }],
         ],
       },
       {
         colour: 'Pink',
-        requirement: [
-          {
-            quantity: 1,
-            type: 'ITEM',
-            action: 'EAT',
-            target: 2,
-          },
+        requirements: [
+          [{ quantity: 1, type: 'ITEM', action: 'EAT', target: 2 }],
         ],
       },
       {
         colour: 'Green',
-        requirement: [
-          {
-            quantity: 1,
-            type: 'ITEM',
-            action: 'EAT',
-            target: 3,
-          },
+        requirements: [
+          [{ quantity: 1, type: 'ITEM', action: 'EAT', target: 3 }],
         ],
       },
     ],
