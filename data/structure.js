@@ -41,6 +41,22 @@ const structureData = [
       target: 2,
     },
   },
+  {
+    id: 5,
+    name: 'Barkbark House',
+    usedBy: {
+      type: 'PINATA',
+      target: 3,
+    },
+  },
+  {
+    id: 6,
+    name: 'Bonboon House',
+    usedBy: {
+      type: 'PINATA',
+      target: 4,
+    },
+  },
 ];
 
 module.exports = { structureData };

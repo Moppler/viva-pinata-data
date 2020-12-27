@@ -1,8 +1,8 @@
 /**
  * @typedef {object} Requirement
  * @property {number} quantity
- * @property {('TERRAIN'|'STRUCTURE'|'ITEM'|'PINATA'|'AWARD'|'PLAYER_LEVEL')} type
- * @property {('IN_GARDEN'|'EAT'|'HAVE')} action
+ * @property {('TERRAIN'|'STRUCTURE'|'ITEM'|'PINATA'|'PINATA_ACCESSORY'|'AWARD'|'PLAYER_LEVEL'|'TREE')} type
+ * @property {('IN_GARDEN'|'EAT'|'HAVE'|'PURCHASE'|'WEARING')} action
  * @property {number|number[]} target
  */
 
@@ -135,24 +135,94 @@ const pinataData = [
     name: 'Barkbark',
     isNocturnal: false,
     requirements: {
-      appear: [],
-      visit: [],
-      resident: [],
-      romance: [],
+      appear: [
+        [{ quantity: 1, type: 'PLAYER_LEVEL', action: 'HAVE', target: 14 }],
+        [{ quantity: 1, type: 'PINATA', action: 'PURCHASE', target: 3 }],
+      ],
+      visit: [
+        [{ quantity: 1, type: 'PLAYER_LEVEL', action: 'HAVE', target: 14 }],
+        [{ quantity: 1, type: 'PINATA', action: 'PURCHASE', target: 3 }],
+      ],
+      resident: [
+        [{ quantity: 1, type: 'PLAYER_LEVEL', action: 'HAVE', target: 14 }],
+        [{ quantity: 1, type: 'PINATA', action: 'PURCHASE', target: 3 }],
+      ],
+      romance: [
+        [
+          {
+            quantity: 1,
+            type: 'PINATA_ACCESSORY',
+            action: 'WEARING',
+            target: 1,
+          },
+        ],
+        [{ quantity: 1, type: 'ITEM', action: 'EAT', target: 13 }],
+        [{ quantity: 1, type: 'STRUCTURE', action: 'IN_GARDEN', target: 5 }],
+      ],
     },
-    variants: [],
+    variants: [
+      {
+        colour: 'Yellow',
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 14 }],
+        ],
+      },
+      {
+        colour: 'Pink',
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 15 }],
+        ],
+      },
+      {
+        colour: 'Green',
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 16 }],
+        ],
+      },
+    ],
   },
   {
     id: 4,
     name: 'Bonboon',
     isNocturnal: false,
     requirements: {
-      appear: [],
-      visit: [],
-      resident: [],
-      romance: [],
+      appear: [
+        [{ quantity: 1, action: 'IN_GARDEN', type: 'PINATA', target: 4 }],
+      ],
+      visit: [
+        [{ quantity: 1, action: 'IN_GARDEN', type: 'TREE', target: 1 }],
+        [{ quantity: 1, action: 'IN_GARDEN', type: 'TREE', target: 2 }],
+      ],
+      resident: [
+        [{ quantity: 7, action: 'EAT', type: 'ITEM', target: 17 }],
+        [{ quantity: 7, action: 'EAT', type: 'ITEM', target: 18 }],
+      ],
+      romance: [
+        [{ quantity: 1, action: 'IN_GARDEN', type: 'STRUCTURE', target: 6 }],
+        [{ quantity: 3, action: 'EAT', type: 'PINATA', target: 26 }],
+      ],
     },
-    variants: [],
+    variants: [
+      {
+        colour: 'Blue',
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 7 }],
+        ],
+      },
+      {
+        colour: 'White',
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 19 }],
+        ],
+      },
+      {
+        colour: 'Yellow',
+        requirements: [
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 3 }],
+          [{ quantity: 1, action: 'EAT', type: 'ITEM', target: 20 }],
+        ],
+      },
+    ],
   },
   {
     id: 5,

@@ -67,6 +67,46 @@ const itemData = [
     name: 'Jar of Honey',
     type: 'PRODUCE',
   },
+  {
+    id: 13,
+    name: 'Bone',
+    type: 'PRODUCE',
+  },
+  {
+    id: 14,
+    name: 'Banana Split',
+    type: 'PRODUCE',
+  },
+  {
+    id: 15,
+    name: 'Bottle of Medicine',
+    type: 'PRODUCE',
+  },
+  {
+    id: 16,
+    name: 'Poison Ivy Flower',
+    type: 'FLOWER',
+  },
+  {
+    id: 17,
+    name: 'Banana',
+    type: 'PRODUCE',
+  },
+  {
+    id: 18,
+    name: 'Monkeynut',
+    type: 'PRODUCE',
+  },
+  {
+    id: 19,
+    name: 'Orchid Flower',
+    type: 'FLOWER',
+  },
+  {
+    id: 20,
+    name: 'Bird of Paradise Seed',
+    type: 'SEED',
+  },
 ];
 
 module.exports = { itemData };
